@@ -105,7 +105,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 $query = "SELECT * FROM instructor WHERE ssn = '" . $_POST['issn'] . "'";
                 $result = mysqli_query($conn, $query);
 
-                if (mysqli_num_rows($result) > 0) {
+                if($result->num_rows>0) {
                     $row = mysqli_fetch_assoc($result);
                     $ssn = $row["ssn"];
                     $iname = $row["iname"];
