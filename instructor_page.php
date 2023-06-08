@@ -105,7 +105,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                 $query = "SELECT * FROM instructor WHERE ssn = '" . $_POST['issn'] . "'";
                 $result = mysqli_query($conn, $query);
 
-                if (mysqli_num_rows($result) > 0) {
+                if($result->num_rows>0) {
                     $row = mysqli_fetch_assoc($result);
                     $ssn = $row["ssn"];
                     $iname = $row["iname"];
@@ -200,9 +200,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                 $courseCode = $row["COURSE CODE"];
 
                                 echo "<tr>
-                                  <td>$day</td>
-                                  <td>$hour</td>
-                                  <td>$courseCode</td>
+                                  <td style='text-align: center;'>$day</td>
+                                  <td style='text-align: center;'>$hour</td>
+                                  <td style='text-align: center;'>$courseCode</td>
                             </tr>";
                             }
                         }
@@ -238,9 +238,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                 $sectionId = $row["sectionId"];
 
                                 echo "<tr>
-                                <td><a href='students_takes_course.php?courseCode=" . $coursecode . "&courseName=" . $coursename . "&sectionId=" . $sectionId . " ' target='_blank'>" . $coursecode . "</a></td>";
-                                echo "<td>" . $coursename . "</td>";
-                                echo "<td>" . $sectionId . "</td>";
+                                <td style='text-align: center;'><a href='students_takes_course.php?courseCode=" . $coursecode . "&courseName=" . $coursename . "&sectionId=" . $sectionId . " ' target='_blank'>" . $coursecode . "</a></td>";
+                                echo "<td style='text-align: center;'>" . $coursename . "</td>";
+                                echo "<td style='text-align: center;'>" . $sectionId . "</td>";
                                 echo "</tr>";
                             }
                         }
@@ -273,10 +273,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             $studentname = $row["studentname"];
 
                             echo "<tr>
-                            <td>" . $ssn . "</td>
-                            <td>" . $gradorUgrad . "</td>
-                            <td>" . $studentid . "</td>
-                            <td>" . $studentname . "</td>
+                            <td style='text-align: center;'>" . $ssn . "</td>
+                            <td style='text-align: center;'>" . $gradorUgrad . "</td>
+                            <td style='text-align: center;'>" . $studentid . "</td>
+                            <td style='text-align: center;'>" . $studentname . "</td>
                             </tr>";
                         }
                         ?>
@@ -308,9 +308,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             $studentname = $row["studentname"];
 
                             echo "<tr>
-                             <td>" . $ssn . "</td>
-                             <td>" . $studentid . "</td>
-                             <td>" . $studentname . "</td>
+                             <td style='text-align: center;'>" . $ssn . "</td>
+                             <td style='text-align: center;'>" . $studentid . "</td>
+                             <td style='text-align: center;'>" . $studentname . "</td>
                              </tr>";
                         }
                         ?>
@@ -349,12 +349,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             $sectionId = $row["sectionId"];
 
                             echo "<tr>
-                             <td><a href=\"exam_grades.php?examname=" . urlencode($examname) . "&date=" . urlencode($date) . "&courseCode=" . urlencode($courseCode) . "&yearr=" . urlencode($yearr) . "&semester=" . urlencode($semester) . "&sectionId=" . urlencode($sectionId) . "\" target=\"_blank\">" . $examname . "</a></td>
-                              <td>" . $date . "</td>
-                              <td>" . $courseCode . "</td>
-                               <td>" . $yearr . "</td>
-                               <td>" . $semester . "</td>
-                                <td>" . $sectionId . "</td>
+                             <td style='text-align: center;'><a href=\"exam_grades.php?examname=" . urlencode($examname) . "&date=" . urlencode($date) . "&courseCode=" . urlencode($courseCode) . "&yearr=" . urlencode($yearr) . "&semester=" . urlencode($semester) . "&sectionId=" . urlencode($sectionId) . "\" target=\"_blank\">" . $examname . "</a></td>
+                              <td style='text-align: center;'>" . $date . "</td>
+                              <td style='text-align: center;'>" . $courseCode . "</td>
+                               <td style='text-align: center;'>" . $yearr . "</td>
+                               <td style='text-align: center;'>" . $semester . "</td>
+                                <td style='text-align: center;'>" . $sectionId . "</td>
                             </tr>";
                         }
 
@@ -366,7 +366,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
 
                 <div id="table_freehours" style="width: 660px; height: 350px; margin:auto; margin-top: -25px; display: none"> <!-- freehours table -->
                     <h4 style="text-align: center; margin-top: 50px">FREE HOURS</h4>
-                    <table style="margin: auto; background-color: white" border="8" cellspacing="3" cellpadding="4">
+                    <table style="margin: auto; background-color: white" border="8" cellspacing="1" cellpadding="0.5">
                         <tr>
                             <th>DAY</th>
                             <th>HOUR</th>
@@ -393,8 +393,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                                 $hour = $row["hourr"];
 
                                 echo "<tr>
-                                  <td>" . $day . "</td>";
-                                echo "<td>" . $hour . "</td>";
+                                  <td style='text-align: center;'>" . $day . "</td>";
+                                echo "<td style='text-align: center;'>" . $hour . "</td>";
                                 echo "</tr>";
                             }
                         }
@@ -432,12 +432,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             $controllingDName = $row["controllingDName"];
 
                             echo "<tr>
-                             <td>" . $pName . "</td>
-                             <td>" . $subject . "</td>
-                             <td>" . $budget . "</td>
-                             <td>" . $startDate . "</td>
-                             <td>" . $endDate . "</td>
-                             <td>" . $controllingDName . "</td>
+                             <td style='text-align: center;'>" . $pName . "</td>
+                             <td style='text-align: center;'>" . $subject . "</td>
+                             <td style='text-align: center;'>" . $budget . "</td>
+                             <td style='text-align: center;'>" . $startDate . "</td>
+                             <td style='text-align: center;'>" . $endDate . "</td>
+                             <td style='text-align: center;'>" . $controllingDName . "</td>
                             </tr>";
                         }
                         ?>
@@ -469,10 +469,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             $workinghour = $row["workinghour"];
 
                             echo "<tr>
-                                <td>" . $leadSsn . "</td>
-                                <td>" . $pName . "</td>
-                                <td>" . $issn . "</td>
-                                <td>" . $workinghour . "</td>
+                                <td style='text-align: center;'>" . $leadSsn . "</td>
+                                <td style='text-align: center;'>" . $pName . "</td>
+                                <td style='text-align: center;'>" . $issn . "</td>
+                                <td style='text-align: center;'>" . $workinghour . "</td>
                               </tr>";
                         }
                         ?>

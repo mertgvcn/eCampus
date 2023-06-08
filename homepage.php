@@ -223,18 +223,12 @@ include("DBconnection.php");
                     </li>
                     <li>
                         <form action="departments_page.php" method="post">
-                            <input type="submit" style="width: 150px;
-                                   height: 40px;
-                                   border: solid 2px;
-                                   margin-left: 10px" value="Department List">
+                            <input type="submit" style="width: 150px; height: 40px; border: solid 2px; margin-left: 10px" value="Department List">
                             </form>                                          
                         </li>
                         <li>
                             <form action="projects_page.php" method="post">
-                                <input type="submit" style="width: 150px;
-                                height: 40px;
-                                border: solid 2px;
-                                margin-left: 10px" value="Project List">
+                                <input type="submit" style="width: 150px; height: 40px; border: solid 2px; margin-left: 10px" value="Project List">
                             </form>     
                         </li>
                     </ul>
