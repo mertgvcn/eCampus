@@ -207,8 +207,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                             }
                         }
                         ?>
-
                     </table>
+                    
                 </div>
 
                 <div id="table_courses" style="width: 660px; height: 350px; margin:auto; margin-top: -25px; display: none"> <!-- course table -->
