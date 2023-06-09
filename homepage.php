@@ -4,7 +4,7 @@ include("DBconnection.php");
 
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
     <title>
         Home
     </title>
@@ -23,6 +23,7 @@ include("DBconnection.php");
         float: left;
         background-color: whitesmoke;
     }
+    
     h2{
         background-color: whitesmoke;
         width: 90%;
@@ -223,12 +224,18 @@ include("DBconnection.php");
                     </li>
                     <li>
                         <form action="departments_page.php" method="post">
-                            <input type="submit" style="width: 150px; height: 40px; border: solid 2px; margin-left: 10px" value="Department List">
+                            <input type="submit" style="width: 150px;
+                                height: 40px;
+                                border: solid 2px;
+                                margin-left: 10px" value="Department List">
                             </form>                                          
                         </li>
                         <li>
                             <form action="projects_page.php" method="post">
-                                <input type="submit" style="width: 150px; height: 40px; border: solid 2px; margin-left: 10px" value="Project List">
+                                <input type="submit" style="width: 150px;
+                                height: 40px;
+                                border: solid 2px;
+                                margin-left: 10px" value="Project List">
                             </form>     
                         </li>
                     </ul>
@@ -238,7 +245,8 @@ include("DBconnection.php");
                 <form action="student_page.php" method="post">
                     <h2>Student Page:</h2>
                     <input type="text" required name="ssn" placeholder="Enter student ssn">
-                        <input type="submit" name="gonder" value="Login">
+                        <input style = "width: 80px; height: 30px; font-size: 16px; font-weight: bold; text-align: center; margin-left: 120px; border: solid 2px; border-radius: 5px; background-color: white" 
+                               type="submit" name="gonder" value="LOGIN">
                             </form>
                             </div>
 
@@ -246,7 +254,8 @@ include("DBconnection.php");
                                 <form action="instructor_page.php" method="post">
                                     <h2>Instructor Page:</h2>
                                     <input type="text" required name="issn" placeholder="Enter instructor ssn">
-                                        <input type="submit" name="gonder" value="Login">
+                                        <input style = "width: 80px; height: 30px; font-size: 16px; font-weight: bold; text-align: center; margin-left: 120px; border: solid 2px; border-radius: 5px; background-color: white" 
+                                               type="submit" name="gonder" value="LOGIN">
                                             </form>
                                             </div>
 
